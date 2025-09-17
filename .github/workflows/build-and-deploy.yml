@@ -1,4 +1,3 @@
-
 name: build-and-deploy
 
 on:
@@ -6,14 +5,15 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install and Build 🔧
         run: |
@@ -28,3 +28,6 @@ jobs:
         with:
           branch: gh-pages
           folder: dist
+          git-config-name: GitHub Actions
+          git-config-email: github-actions@github.com
+          clean: true
