@@ -4,11 +4,11 @@ export interface Person {
   name: string;
   avatarColor: string;
   status: 'claimed' | 'unclaimed';
-  inviteToken?: string;
 }
 
 export interface Walk {
   id: string;
+  weekId: string;
   day: string;
   timeSlot: 'Mañana' | 'Tarde' | 'Noche';
   personId: string | null;
