@@ -9,8 +9,17 @@ if (!rootElement) {
 }
 
 const root = ReactDOM.createRoot(rootElement);
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+
+try {
+  root.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
+} catch (error) {
+  const errorElement = document.createElement('pre');
+  errorElement.textContent = 'An error occurred during rendering: ' + error.message + '\n' + error.stack;
+  document.body.innerHTML = '';
+  document.body.appendChild(errorElement);
+  console.error(error);
+}
