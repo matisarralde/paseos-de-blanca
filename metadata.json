@@ -1,0 +1,5 @@
+{
+  "name": "Paseos de Blanca",
+  "description": "A simple and elegant web application to manage and track the weekly dog walking schedule for Blanca, designed for a family of six. It helps automate scheduling, track completed walks, view a monthly leaderboard, and allows users to swap shifts.",
+  "requestFramePermissions": []
+}
