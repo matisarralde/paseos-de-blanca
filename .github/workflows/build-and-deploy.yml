@@ -26,8 +26,6 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
           folder: dist
-          git-config-name: GitHub Actions
-          git-config-email: github-actions@github.com
-          clean: true
