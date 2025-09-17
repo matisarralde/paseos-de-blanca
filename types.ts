@@ -4,6 +4,7 @@ export interface Person {
   name: string;
   avatarColor: string;
   status: 'claimed' | 'unclaimed';
+  countsOnLeaderboard: boolean;
 }
 
 export interface Walk {

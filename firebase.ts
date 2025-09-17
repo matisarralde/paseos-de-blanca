@@ -1,6 +1,5 @@
-
 import { initializeApp } from "firebase/app";
-import { getFunctions, httpsCallable } from "firebase/functions";
+import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -14,7 +13,6 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const functions = getFunctions(app);
 
-// Get a reference to the callGemini function
-export const callGemini = httpsCallable(functions, 'callGemini');
+// Initialize Cloud Firestore and export it
+export const db = getFirestore(app);
